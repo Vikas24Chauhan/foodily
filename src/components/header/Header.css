@@ -1,0 +1,31 @@
+.header-container {
+  width: 100%;
+  height: 90vh;
+  background-color: #beb996;
+  align-content: center;
+}
+
+.header-contant {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.header-text {
+  width: 48%;
+  color: white;
+  align-content: center;
+}
+
+.header-text h1 {
+  font-size: 80px;
+  font-family: LillyBelle;
+}
+
+.header-image {
+  width: 48%;
+}
+
+.header-image img {
+  width: 100%;
+}
