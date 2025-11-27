@@ -34,15 +34,50 @@ function Header() {
   ];
 
   const extendedSlides = [slides[slides.length - 1], ...slides, slides[0]];
-
   const [currentIndex, setCurrentIndex] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+  const [animateSlide, setAnimateSlide] = useState(false);
+  const sectionRef = useRef(null);
   const timeoutRef = useRef(null);
+
+  // Intersection Observer for scroll animation
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  // Trigger animation on slide change
+  useEffect(() => {
+    setAnimateSlide(false);
+    const timer = setTimeout(() => {
+      setAnimateSlide(true);
+    }, 50);
+    return () => clearTimeout(timer);
+  }, [currentIndex]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 4500);
+    }, 6000);
     return () => clearInterval(interval);
   }, [currentIndex]);
 
@@ -63,7 +98,6 @@ function Header() {
       setIsTransitioning(false);
       setCurrentIndex(1);
     }
-
     if (currentIndex === 0) {
       setIsTransitioning(false);
       setCurrentIndex(extendedSlides.length - 2);
@@ -72,7 +106,10 @@ function Header() {
 
   return (
     <section
-      className="header-section"
+      ref={sectionRef}
+      className={`header-section ${
+        isVisible && animateSlide ? "animate-in" : ""
+      }`}
       style={{ backgroundColor: extendedSlides[currentIndex].color }}
     >
       <main className="header-main">
@@ -105,7 +142,6 @@ function Header() {
             </div>
           ))}
         </div>
-
         <button
           className="header-nav-button header-prev-button"
           onClick={handlePrev}
