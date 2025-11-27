@@ -1,0 +1,112 @@
+.juices-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  background-image: url(../../assets/images/home/juices_bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 4rem;
+}
+
+.juices-image {
+  width: 55%;
+  text-align: center;
+  padding-top: 6rem;
+}
+
+.juices-image img {
+  width: 85%;
+}
+
+.juices-content {
+  width: 45%;
+  align-content: center;
+  background-image: url(../../assets/images/home/juices_glass_bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.juices-content h5 {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: var(--niconne);
+  color: #27272f;
+}
+
+.juices-content h1 {
+  font-size: 48px;
+  color: #272727;
+  padding: 10px 0;
+}
+
+.juices-content span {
+  color: #de9190;
+}
+
+.juices-content p {
+  width: 60%;
+  font-size: 18px;
+  color: #5e5e5e;
+  line-height: 24px;
+  padding: 10px 0;
+}
+
+.juices-content button {
+  display: inline-block;
+  padding: 15px 25px;
+  margin-top: 1rem;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 50px;
+  border: 1px solid #de9190;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.juices-content button:hover {
+  background-color: #de9190;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ------------------------- Responsive Style ----------------------- */
+
+@media (max-width: 1440px) {
+  .juices-image img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .juices-content p {
+    width: 80%;
+  }
+}
+
+@media (max-width: 800px) {
+  .juices-container {
+    flex-wrap: wrap-reverse;
+    background-image: none;
+  }
+
+  .juices-content {
+    width: 100%;
+    padding: 0 1rem;
+    background-image: none;
+  }
+
+  .juices-content p {
+    width: 100%;
+  }
+
+  .juices-image {
+    width: 100%;
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .juices-content h1 {
+    font-size: 36px;
+  }
+}
