@@ -1,0 +1,100 @@
+.beverage-container {
+  width: 100%;
+  background-image: url(../../assets/images/home/beverage_bg.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.beverage-container h5 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #272727;
+}
+
+.beverage-container h1 {
+  font-size: 48px;
+  color: #272727;
+  padding: 10px 0;
+}
+
+.beverage-container span {
+  color: #de9190;
+}
+
+.beverage-cards {
+  width: 80%;
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.beverage-card {
+  width: 23%;
+  margin-top: 2rem;
+}
+
+.beverage-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.beverage-card img:hover {
+  cursor: pointer;
+  transform: scale(1.025);
+  transition-duration: 0.75s;
+}
+
+.beverage-card h4 {
+  font-size: 18px;
+  padding: 10px 0;
+  color: #272727;
+}
+
+.beverage-card h4:hover {
+  color: #de9190;
+  cursor: pointer;
+}
+
+.beverage-card h6 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #4e4e4e;
+}
+
+/* ------------------------- Responsive Style ----------------------- */
+
+@media (max-width: 1440px) {
+  .beverage-cards {
+    width: 85%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .beverage-cards {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .beverage-card {
+    width: 48%;
+  }
+}
+
+@media (max-width: 500px) {
+  .beverage-cards {
+    justify-content: center;
+  }
+
+  .beverage-card {
+    width: 90%;
+  }
+
+  .beverage-container h1 {
+    font-size: 36px;
+  }
+}
