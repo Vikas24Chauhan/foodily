@@ -1,0 +1,114 @@
+.bigDeals-container {
+  width: 100%;
+  background-image: url(../../assets/images/home/big_deals_bg.jpg);
+  position: relative;
+  /* padding: 120px 0; */
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bigDeals-container img {
+  width: 100%;
+}
+
+.bigDeals-image-1 {
+  margin-top: -10px;
+}
+
+.bigDeals-image-2 {
+  margin-bottom: -10px;
+}
+
+.bigDeals-content {
+  position: relative;
+  width: 670px;
+  height: 670px;
+  color: #ffffff;
+  background-image: url(../../assets/images/home/big_deals.png);
+  background-color: hsla(53, 24%, 67%, 0.95);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+  align-content: center;
+  margin-left: 14rem;
+}
+
+.bigDeals-content h5 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.bigDeals-content h1 {
+  font-size: 48px;
+  padding: 10px 0;
+}
+
+.bigDeals-content p {
+  font-size: 18px;
+  line-height: 24px;
+  padding: 10px 100px;
+}
+
+/* .email-form .form-group input[type="email"],
+.email-form .form-group input[type="tel"],
+.email-form .form-group input[type="text"],
+.email-form .form-group textarea {
+  position: relative;
+  width: 100%;
+  line-height: 28px;
+  padding: 10px 30px;
+  height: 60px;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  font-weight: 300;
+  transition: all 0.3s ease;
+  background: none;
+  border: 1px solid hsla(0, 0%, 100%, 0.7);
+} */
+
+/* ------------------------- Responsive Style ----------------------- */
+
+@media (max-width: 1440px) {
+  .bigDeals-content {
+    margin-left: 12rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .bigDeals-content {
+    width: 620px;
+    height: 620px;
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .bigDeals-content {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+
+  .bigDeals-content p {
+    padding: 10px;
+  }
+
+  .bigDeals-image-1 {
+    margin-top: 0;
+  }
+
+  .bigDeals-image-2 {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .bigDeals-content h1 {
+    font-size: 36px;
+  }
+}

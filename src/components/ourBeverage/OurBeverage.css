@@ -67,7 +67,7 @@
 .beverage-container button {
   display: inline-block;
   padding: 15px 25px;
-  margin-top: 1rem;
+  margin: 1rem 0 4rem 0;
   font-size: 16px;
   font-weight: 500;
   border-radius: 50px;
