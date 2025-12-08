@@ -4,6 +4,7 @@ import FruitJuices from "../components/fruitJuices/FruitJuices";
 import OurBeverage from "../components/ourBeverage/OurBeverage";
 import BigDeals from "../components/bigDeals/BigDeals";
 import Detox from "../components/detox/Detox";
+import UpComing from "../components/upcoming/UpComing";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <OurBeverage />
       <BigDeals />
       <Detox />
+      <UpComing />
     </div>
   );
 }
