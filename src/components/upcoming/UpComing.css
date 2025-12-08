@@ -81,7 +81,7 @@
 
   .upcoming-content {
     width: 100%;
-    background-image: none;
+    background-position: bottom right;
     padding: 4rem 10px;
   }
 

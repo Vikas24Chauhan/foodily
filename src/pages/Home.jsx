@@ -5,6 +5,7 @@ import OurBeverage from "../components/ourBeverage/OurBeverage";
 import BigDeals from "../components/bigDeals/BigDeals";
 import Detox from "../components/detox/Detox";
 import UpComing from "../components/upcoming/UpComing";
+import Testimonials from "../components/testimonials/Testimonials";
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
       <BigDeals />
       <Detox />
       <UpComing />
+      <Testimonials />
     </div>
   );
 }
