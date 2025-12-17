@@ -34,12 +34,12 @@ function Navbar() {
         <NavLink to="/gallery" onClick={handleCloseNav}>
           Gallery
         </NavLink>
-        <NavLink to="/blog" onClick={handleCloseNav}>
+        {/* <NavLink to="/blog" onClick={handleCloseNav}>
           Blog
         </NavLink>
         <NavLink to="/contact" onClick={handleCloseNav}>
           Contact
-        </NavLink>
+        </NavLink> */}
       </nav>
 
       <div className="hamburger">
